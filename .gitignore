@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+.installed.cfg
+*.egg
+node_modules/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+*local.py
+var
+static/
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# IntelliJ project files
+.idea
+*.iml
+
+# System Files
+.DS_Store
+
+# Databse Dumps
+*.db

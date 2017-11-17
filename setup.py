@@ -19,6 +19,7 @@ setup(
     },
     include_package_data=True,
     install_requires=[
-        'django-cms>=3.4.5'
+        'django-cms>=3.4.5',
+        'PyYAML>=3.12',
     ],
 )

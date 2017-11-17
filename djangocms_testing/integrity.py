@@ -11,7 +11,8 @@ from cms.models import CMSPlugin
 from cms.plugin_pool import plugin_pool
 
 from django.contrib.sites.models import Site
-from django.conf import settings
+
+from djangocms_testing import conf
 
 
 class CMSPluginIntegrity:
@@ -21,8 +22,8 @@ class CMSPluginIntegrity:
     plugins do work in general and they don't contain any code or syntax issues.
     It doesn't test each plugin output individually.
     """
-    DEFAULT_LANGUAGE = settings.LANGUAGES[0][0]
-    DEFAULT_TEMPLATE = 'djangocms_testing/generic_page.html'
+    DEFAULT_LANGUAGE = conf.DEFAULT_LANGUAGE
+    DEFAULT_TEMPLATE = conf.DEFAULT_TEMPLATE
 
     # List of plugins to test. Uses the Plugin name, and a dict of sample
     # data we pass to the Plugin to have initial, valid content.

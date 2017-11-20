@@ -1,4 +1,3 @@
-import os
 from logging import getLogger
 from pprint import pformat
 
@@ -9,12 +8,8 @@ from cms.models.pagemodel import Page
 from cms.models.placeholdermodel import Placeholder
 from cms.plugin_pool import plugin_pool
 from cms.utils import get_cms_setting
-from django.conf import settings
 from django.contrib.sites.models import Site
-from django.core.files import File
 from django.core.management.base import BaseCommand
-from filer.models.filemodels import File as FilerFile
-from filer.models.imagemodels import Image as FilerImage
 
 from djangocms_testing import conf
 
@@ -36,12 +31,6 @@ class Command(BaseCommand):
 
     # ToDo:
     #  * Dump page to YAML
-    #  * Make templates configurable?
-    #  * Make placeholders configurable?
-    #  * Make sites configurable?
-    #  * How can this be inherited to define your own? That would allow better customization, for example, sample_data
-
-
     def add_arguments(self, parser):
         parser.add_argument(
             'source',
